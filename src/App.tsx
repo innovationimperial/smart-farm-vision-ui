@@ -11,6 +11,11 @@ import CropDataEntry from "./pages/CropDataEntry";
 import CropCalendar from "./pages/CropCalendar";
 import FieldManagement from "./pages/FieldManagement";
 import CropAnalytics from "./pages/CropAnalytics";
+import Livestock from "./pages/Livestock";
+import AnimalRegistration from "./pages/livestock/AnimalRegistration";
+import LineageInformation from "./pages/livestock/LineageInformation";
+import AcquisitionDetails from "./pages/livestock/AcquisitionDetails";
+import AnimalMovement from "./pages/livestock/AnimalMovement";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +34,11 @@ const App = () => (
           <Route path="/crops/calendar" element={<CropCalendar />} />
           <Route path="/crops/fields" element={<FieldManagement />} />
           <Route path="/crops/analytics" element={<CropAnalytics />} />
+          <Route path="/livestock" element={<Livestock />} />
+          <Route path="/livestock/animal-registration" element={<AnimalRegistration />} />
+          <Route path="/livestock/lineage" element={<LineageInformation />} />
+          <Route path="/livestock/acquisition" element={<AcquisitionDetails />} />
+          <Route path="/livestock/movement" element={<AnimalMovement />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
