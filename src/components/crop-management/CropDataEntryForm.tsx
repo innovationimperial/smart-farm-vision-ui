@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { CalendarIcon, Camera, QrCode, Calculator } from "lucide-react"
+import { CalendarIcon, Camera, QrCode, Calculator, Save } from "lucide-react"
 import { format } from "date-fns"
 import { cn } from "@/lib/utils"
 
