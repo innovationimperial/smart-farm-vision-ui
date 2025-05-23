@@ -32,6 +32,10 @@ import PurchaseRecords from "./pages/livestock/PurchaseRecords";
 import SalesRecords from "./pages/livestock/SalesRecords";
 import OperatingExpenses from "./pages/livestock/OperatingExpenses";
 import ProfitabilityAnalysis from "./pages/livestock/ProfitabilityAnalysis";
+import HousingRecords from "./pages/livestock/HousingRecords";
+import EquipmentInventory from "./pages/livestock/EquipmentInventory";
+import RegulatoryCompliance from "./pages/livestock/RegulatoryCompliance";
+import RecordKeeping from "./pages/livestock/RecordKeeping";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -71,6 +75,10 @@ const App = () => (
           <Route path="/livestock/sales" element={<SalesRecords />} />
           <Route path="/livestock/expenses" element={<OperatingExpenses />} />
           <Route path="/livestock/profitability" element={<ProfitabilityAnalysis />} />
+          <Route path="/livestock/housing" element={<HousingRecords />} />
+          <Route path="/livestock/equipment" element={<EquipmentInventory />} />
+          <Route path="/livestock/compliance" element={<RegulatoryCompliance />} />
+          <Route path="/livestock/record-keeping" element={<RecordKeeping />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
