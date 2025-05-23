@@ -21,6 +21,10 @@ import VaccinationSchedule from "./pages/livestock/VaccinationSchedule";
 import TreatmentRecords from "./pages/livestock/TreatmentRecords";
 import VeterinaryVisits from "./pages/livestock/VeterinaryVisits";
 import BreedingRecords from "./pages/livestock/BreedingRecords";
+import FeedInventory from "./pages/livestock/FeedInventory";
+import DailyFeeding from "./pages/livestock/DailyFeeding";
+import GrazingManagement from "./pages/livestock/GrazingManagement";
+import NutritionalAnalysis from "./pages/livestock/NutritionalAnalysis";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -49,6 +53,10 @@ const App = () => (
           <Route path="/livestock/treatment" element={<TreatmentRecords />} />
           <Route path="/livestock/veterinary" element={<VeterinaryVisits />} />
           <Route path="/livestock/breeding" element={<BreedingRecords />} />
+          <Route path="/livestock/feed-inventory" element={<FeedInventory />} />
+          <Route path="/livestock/feeding" element={<DailyFeeding />} />
+          <Route path="/livestock/grazing" element={<GrazingManagement />} />
+          <Route path="/livestock/nutrition-analysis" element={<NutritionalAnalysis />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
