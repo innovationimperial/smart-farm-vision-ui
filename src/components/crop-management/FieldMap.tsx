@@ -2,7 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { MapPin, Layers, Satellite, Terrain } from "lucide-react"
+import { MapPin, Layers, Satellite, Mountain } from "lucide-react"
 import { useState } from "react"
 
 export function FieldMap() {
@@ -27,7 +27,7 @@ export function FieldMap() {
               size="sm"
               onClick={() => setMapType('terrain')}
             >
-              <Terrain className="w-4 h-4 mr-1" />
+              <Mountain className="w-4 h-4 mr-1" />
               Terrain
             </Button>
             <Button
