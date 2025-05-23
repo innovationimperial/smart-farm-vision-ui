@@ -10,6 +10,7 @@ import CropManagement from "./pages/CropManagement";
 import CropDataEntry from "./pages/CropDataEntry";
 import CropCalendar from "./pages/CropCalendar";
 import FieldManagement from "./pages/FieldManagement";
+import CropAnalytics from "./pages/CropAnalytics";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/crops/data-entry" element={<CropDataEntry />} />
           <Route path="/crops/calendar" element={<CropCalendar />} />
           <Route path="/crops/fields" element={<FieldManagement />} />
+          <Route path="/crops/analytics" element={<CropAnalytics />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
