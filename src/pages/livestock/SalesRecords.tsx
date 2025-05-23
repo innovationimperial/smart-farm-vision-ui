@@ -1,10 +1,9 @@
-
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { format } from "date-fns"
-import { Calendar as CalendarIcon, Download, FileText, Plus, DollarSign, Truck, Scale, Store, TrendingUp, Calendar } from "lucide-react"
+import { Calendar as CalendarIcon, Download, FileText, Plus, DollarSign, Store, TrendingUp } from "lucide-react"
 import { DashboardLayout } from "@/components/DashboardLayout"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -175,7 +174,7 @@ export default function SalesRecords() {
                   <h3 className="text-2xl font-bold">$875.00</h3>
                   <p className="text-xs text-yellow-600">1 pending transaction</p>
                 </div>
-                <Calendar className="h-5 w-5 text-yellow-500" />
+                <CalendarIcon className="h-5 w-5 text-yellow-500" />
               </div>
             </CardContent>
           </Card>
