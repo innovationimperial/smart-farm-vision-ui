@@ -29,6 +29,9 @@ import MilkProduction from "./pages/livestock/MilkProduction";
 import EggProduction from "./pages/livestock/EggProduction";
 import MeatProduction from "./pages/livestock/MeatProduction";
 import PurchaseRecords from "./pages/livestock/PurchaseRecords";
+import SalesRecords from "./pages/livestock/SalesRecords";
+import OperatingExpenses from "./pages/livestock/OperatingExpenses";
+import ProfitabilityAnalysis from "./pages/livestock/ProfitabilityAnalysis";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -65,6 +68,9 @@ const App = () => (
           <Route path="/livestock/egg-production" element={<EggProduction />} />
           <Route path="/livestock/meat-production" element={<MeatProduction />} />
           <Route path="/livestock/purchase" element={<PurchaseRecords />} />
+          <Route path="/livestock/sales" element={<SalesRecords />} />
+          <Route path="/livestock/expenses" element={<OperatingExpenses />} />
+          <Route path="/livestock/profitability" element={<ProfitabilityAnalysis />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
