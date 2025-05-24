@@ -42,6 +42,9 @@ import Aquaculture from "./pages/Aquaculture";
 import WaterBodyRegistration from "./pages/aquaculture/WaterBodyRegistration";
 import WaterQualityManagement from "./pages/aquaculture/WaterQualityManagement";
 import SystemInfrastructure from "./pages/aquaculture/SystemInfrastructure";
+import AquacultureFeedInventory from "./pages/aquaculture/FeedInventory";
+import AquacultureDailyFeeding from "./pages/aquaculture/DailyFeeding";
+import FeedConversionAnalysis from "./pages/aquaculture/FeedConversionAnalysis";
 
 import NotFound from "./pages/NotFound";
 
@@ -92,6 +95,9 @@ const App = () => (
           <Route path="/aquaculture/water-body" element={<WaterBodyRegistration />} />
           <Route path="/aquaculture/water-quality" element={<WaterQualityManagement />} />
           <Route path="/aquaculture/infrastructure" element={<SystemInfrastructure />} />
+          <Route path="/aquaculture/feed-inventory" element={<AquacultureFeedInventory />} />
+          <Route path="/aquaculture/feeding" element={<AquacultureDailyFeeding />} />
+          <Route path="/aquaculture/feed-conversion" element={<FeedConversionAnalysis />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
