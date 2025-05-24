@@ -36,6 +36,13 @@ import HousingRecords from "./pages/livestock/HousingRecords";
 import EquipmentInventory from "./pages/livestock/EquipmentInventory";
 import RegulatoryCompliance from "./pages/livestock/RegulatoryCompliance";
 import RecordKeeping from "./pages/livestock/RecordKeeping";
+
+// Aquaculture imports
+import Aquaculture from "./pages/Aquaculture";
+import WaterBodyRegistration from "./pages/aquaculture/WaterBodyRegistration";
+import WaterQualityManagement from "./pages/aquaculture/WaterQualityManagement";
+import SystemInfrastructure from "./pages/aquaculture/SystemInfrastructure";
+
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -79,6 +86,13 @@ const App = () => (
           <Route path="/livestock/equipment" element={<EquipmentInventory />} />
           <Route path="/livestock/compliance" element={<RegulatoryCompliance />} />
           <Route path="/livestock/record-keeping" element={<RecordKeeping />} />
+          
+          {/* Aquaculture Routes */}
+          <Route path="/aquaculture" element={<Aquaculture />} />
+          <Route path="/aquaculture/water-body" element={<WaterBodyRegistration />} />
+          <Route path="/aquaculture/water-quality" element={<WaterQualityManagement />} />
+          <Route path="/aquaculture/infrastructure" element={<SystemInfrastructure />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
