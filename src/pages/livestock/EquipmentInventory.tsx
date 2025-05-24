@@ -1,4 +1,3 @@
-
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -11,7 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { ArrowLeft, Calendar, Download, FileText, Package, Plus, Save, Tool, Wrench } from "lucide-react"
+import { ArrowLeft, Calendar, Download, FileText, Package, Plus, Save, Wrench } from "lucide-react"
 import { NavLink } from "react-router-dom"
 import { useToast } from "@/hooks/use-toast"
 import { cn } from "@/lib/utils"
@@ -118,7 +117,7 @@ export default function EquipmentInventory() {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-3xl font-bold text-gray-900 flex items-center gap-3">
-              <Tool className="w-8 h-8 text-indigo-500" />
+              <Wrench className="w-8 h-8 text-indigo-500" />
               Equipment Inventory
             </h1>
             <p className="text-gray-600 mt-2">Track and manage farm equipment and tools</p>
@@ -171,7 +170,7 @@ export default function EquipmentInventory() {
                   <h3 className="text-2xl font-bold">2</h3>
                   <p className="text-xs text-red-600">Scheduled for service</p>
                 </div>
-                <Tool className="h-5 w-5 text-red-500" />
+                <Wrench className="h-5 w-5 text-red-500" />
               </div>
             </CardContent>
           </Card>
