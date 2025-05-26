@@ -46,6 +46,12 @@ import AquacultureFeedInventory from "./pages/aquaculture/FeedInventory";
 import AquacultureDailyFeeding from "./pages/aquaculture/DailyFeeding";
 import FeedConversionAnalysis from "./pages/aquaculture/FeedConversionAnalysis";
 
+// Equipment imports
+import Equipment from "./pages/Equipment";
+import EquipmentRegistration from "./pages/equipment/EquipmentRegistration";
+import ConditionAssessment from "./pages/equipment/ConditionAssessment";
+import EquipmentSpecifications from "./pages/equipment/EquipmentSpecifications";
+
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -98,6 +104,12 @@ const App = () => (
           <Route path="/aquaculture/feed-inventory" element={<AquacultureFeedInventory />} />
           <Route path="/aquaculture/feeding" element={<AquacultureDailyFeeding />} />
           <Route path="/aquaculture/feed-conversion" element={<FeedConversionAnalysis />} />
+          
+          {/* Equipment Routes */}
+          <Route path="/equipment" element={<Equipment />} />
+          <Route path="/equipment/registration" element={<EquipmentRegistration />} />
+          <Route path="/equipment/condition" element={<ConditionAssessment />} />
+          <Route path="/equipment/specifications" element={<EquipmentSpecifications />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
