@@ -52,6 +52,11 @@ import EquipmentRegistration from "./pages/equipment/EquipmentRegistration";
 import ConditionAssessment from "./pages/equipment/ConditionAssessment";
 import EquipmentSpecifications from "./pages/equipment/EquipmentSpecifications";
 
+// Inventory imports
+import Inventory from "./pages/Inventory";
+import SeedInventory from "./pages/inventory/SeedInventory";
+import ChemicalInventory from "./pages/inventory/ChemicalInventory";
+
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -110,6 +115,11 @@ const App = () => (
           <Route path="/equipment/registration" element={<EquipmentRegistration />} />
           <Route path="/equipment/condition" element={<ConditionAssessment />} />
           <Route path="/equipment/specifications" element={<EquipmentSpecifications />} />
+          
+          {/* Inventory Routes */}
+          <Route path="/inventory" element={<Inventory />} />
+          <Route path="/inventory/seeds" element={<SeedInventory />} />
+          <Route path="/inventory/chemicals" element={<ChemicalInventory />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
