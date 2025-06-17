@@ -22,24 +22,42 @@ export interface WeatherData {
 
 export async function getCurrentWeather(lat: number = 40.7128, lon: number = -74.0060): Promise<WeatherData> {
   try {
+    console.log('Fetching weather for coordinates:', lat, lon)
+    
     // Get current weather
     const currentResponse = await fetch(
       `${BASE_URL}/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=imperial`
     )
+    
+    if (!currentResponse.ok) {
+      const errorData = await currentResponse.json()
+      console.error('Current weather API error:', errorData)
+      throw new Error(`Weather API error: ${errorData.message}`)
+    }
+    
     const currentData = await currentResponse.json()
+    console.log('Current weather data:', currentData)
 
     // Get 5-day forecast
     const forecastResponse = await fetch(
       `${BASE_URL}/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=imperial`
     )
+    
+    if (!forecastResponse.ok) {
+      const errorData = await forecastResponse.json()
+      console.error('Forecast API error:', errorData)
+      throw new Error(`Forecast API error: ${errorData.message}`)
+    }
+    
     const forecastData = await forecastResponse.json()
+    console.log('Forecast data:', forecastData)
 
     // Process current weather
     const current = {
       temperature: Math.round(currentData.main.temp),
       condition: currentData.weather[0].main,
       humidity: currentData.main.humidity,
-      windSpeed: Math.round(currentData.wind.speed),
+      windSpeed: Math.round(currentData.wind?.speed || 0),
       icon: currentData.weather[0].icon
     }
 
@@ -65,7 +83,6 @@ export async function getCurrentWeather(lat: number = 40.7128, lon: number = -74
     // Convert to forecast array
     const forecast = Array.from(dailyForecasts.values()).slice(0, 5).map((day: any, index: number) => {
       const temps = day.temps
-      const dayNames = ['Today', 'Tomorrow', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
       
       return {
         day: index === 0 ? 'Today' : index === 1 ? 'Tomorrow' : 

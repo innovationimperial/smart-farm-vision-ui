@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -36,6 +35,8 @@ import HousingRecords from "./pages/livestock/HousingRecords";
 import EquipmentInventory from "./pages/livestock/EquipmentInventory";
 import RegulatoryCompliance from "./pages/livestock/RegulatoryCompliance";
 import RecordKeeping from "./pages/livestock/RecordKeeping";
+import Weather from "./pages/Weather";
+import AIAssistant from "./pages/AIAssistant";
 
 // Aquaculture imports
 import Aquaculture from "./pages/Aquaculture";
@@ -120,6 +121,12 @@ const App = () => (
           <Route path="/inventory" element={<Inventory />} />
           <Route path="/inventory/seeds" element={<SeedInventory />} />
           <Route path="/inventory/chemicals" element={<ChemicalInventory />} />
+          
+          {/* Weather Routes */}
+          <Route path="/weather" element={<Weather />} />
+          
+          {/* AI Assistant Routes */}
+          <Route path="/ai-assistant" element={<AIAssistant />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
