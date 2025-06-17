@@ -37,6 +37,9 @@ import RegulatoryCompliance from "./pages/livestock/RegulatoryCompliance";
 import RecordKeeping from "./pages/livestock/RecordKeeping";
 import Weather from "./pages/Weather";
 import AIAssistant from "./pages/AIAssistant";
+import Finance from "./pages/Finance";
+import ChartOfAccounts from "./pages/finance/ChartOfAccounts";
+import ExpenseManagement from "./pages/finance/ExpenseManagement";
 
 // Aquaculture imports
 import Aquaculture from "./pages/Aquaculture";
@@ -121,6 +124,11 @@ const App = () => (
           <Route path="/inventory" element={<Inventory />} />
           <Route path="/inventory/seeds" element={<SeedInventory />} />
           <Route path="/inventory/chemicals" element={<ChemicalInventory />} />
+          
+          {/* Finance Routes */}
+          <Route path="/finance" element={<Finance />} />
+          <Route path="/finance/chart-of-accounts" element={<ChartOfAccounts />} />
+          <Route path="/finance/expenses" element={<ExpenseManagement />} />
           
           {/* Weather Routes */}
           <Route path="/weather" element={<Weather />} />
