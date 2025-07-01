@@ -74,6 +74,15 @@ import PayrollManagement from "./pages/hr/PayrollManagement";
 import TimeAttendance from "./pages/hr/TimeAttendance";
 import TrainingDevelopment from "./pages/hr/TrainingDevelopment";
 
+// Compliance imports
+import Compliance from "./pages/Compliance";
+import RegulatoryStandards from "./pages/compliance/RegulatoryStandards";
+import AuditManagement from "./pages/compliance/AuditManagement";
+import Documentation from "./pages/compliance/Documentation";
+import TrainingRecords from "./pages/compliance/TrainingRecords";
+import InspectionReports from "./pages/compliance/InspectionReports";
+import NonComplianceTracking from "./pages/compliance/NonComplianceTracking";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -159,6 +168,15 @@ const App = () => (
           <Route path="/hr/payroll" element={<PayrollManagement />} />
           <Route path="/hr/time-attendance" element={<TimeAttendance />} />
           <Route path="/hr/training" element={<TrainingDevelopment />} />
+          
+          {/* Compliance Routes */}
+          <Route path="/compliance" element={<Compliance />} />
+          <Route path="/compliance/standards" element={<RegulatoryStandards />} />
+          <Route path="/compliance/audits" element={<AuditManagement />} />
+          <Route path="/compliance/documentation" element={<Documentation />} />
+          <Route path="/compliance/training" element={<TrainingRecords />} />
+          <Route path="/compliance/inspections" element={<InspectionReports />} />
+          <Route path="/compliance/non-compliance" element={<NonComplianceTracking />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
