@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -60,6 +61,12 @@ import EquipmentSpecifications from "./pages/equipment/EquipmentSpecifications";
 import Inventory from "./pages/Inventory";
 import SeedInventory from "./pages/inventory/SeedInventory";
 import ChemicalInventory from "./pages/inventory/ChemicalInventory";
+
+// Marketing imports
+import Marketing from "./pages/Marketing";
+import CustomerManagement from "./pages/marketing/CustomerManagement";
+import ProductCatalog from "./pages/marketing/ProductCatalog";
+import SalesChannels from "./pages/marketing/SalesChannels";
 
 import NotFound from "./pages/NotFound";
 
@@ -129,6 +136,12 @@ const App = () => (
           <Route path="/finance" element={<Finance />} />
           <Route path="/finance/chart-of-accounts" element={<ChartOfAccounts />} />
           <Route path="/finance/expenses" element={<ExpenseManagement />} />
+          
+          {/* Marketing Routes */}
+          <Route path="/marketing" element={<Marketing />} />
+          <Route path="/marketing/customers" element={<CustomerManagement />} />
+          <Route path="/marketing/products" element={<ProductCatalog />} />
+          <Route path="/marketing/channels" element={<SalesChannels />} />
           
           {/* Weather Routes */}
           <Route path="/weather" element={<Weather />} />

@@ -32,7 +32,7 @@ const navigation = [
   { name: "Inventory", href: "/inventory", icon: Package },
   { name: "Weather", href: "/weather", icon: CloudRain },
   { name: "AI Assistant", href: "/ai-assistant", icon: Bot },
-  { name: "Finances", href: "/finances", icon: DollarSign },
+  { name: "Finances", href: "/finance", icon: DollarSign },
   { name: "Marketing", href: "/marketing", icon: BarChart3 },
   { name: "Human Resources", href: "/hr", icon: Users },
   { name: "Compliance", href: "/compliance", icon: ShieldCheck },
