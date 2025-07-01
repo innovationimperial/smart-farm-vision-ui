@@ -83,6 +83,14 @@ import TrainingRecords from "./pages/compliance/TrainingRecords";
 import InspectionReports from "./pages/compliance/InspectionReports";
 import NonComplianceTracking from "./pages/compliance/NonComplianceTracking";
 
+// Sustainability imports
+import Sustainability from "./pages/Sustainability";
+import CarbonFootprint from "./pages/sustainability/CarbonFootprint";
+
+// Analytics imports
+import Analytics from "./pages/Analytics";
+import ProductionAnalytics from "./pages/analytics/ProductionAnalytics";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -177,6 +185,14 @@ const App = () => (
           <Route path="/compliance/training" element={<TrainingRecords />} />
           <Route path="/compliance/inspections" element={<InspectionReports />} />
           <Route path="/compliance/non-compliance" element={<NonComplianceTracking />} />
+          
+          {/* Sustainability Routes */}
+          <Route path="/sustainability" element={<Sustainability />} />
+          <Route path="/sustainability/carbon-footprint" element={<CarbonFootprint />} />
+          
+          {/* Analytics Routes */}
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/analytics/production" element={<ProductionAnalytics />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
