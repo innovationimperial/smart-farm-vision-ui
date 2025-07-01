@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -69,6 +68,11 @@ import ProductCatalog from "./pages/marketing/ProductCatalog";
 import SalesChannels from "./pages/marketing/SalesChannels";
 
 import NotFound from "./pages/NotFound";
+import HumanResources from "./pages/HumanResources";
+import EmployeeManagement from "./pages/hr/EmployeeManagement";
+import PayrollManagement from "./pages/hr/PayrollManagement";
+import TimeAttendance from "./pages/hr/TimeAttendance";
+import TrainingDevelopment from "./pages/hr/TrainingDevelopment";
 
 const queryClient = new QueryClient();
 
@@ -148,6 +152,13 @@ const App = () => (
           
           {/* AI Assistant Routes */}
           <Route path="/ai-assistant" element={<AIAssistant />} />
+          
+          {/* Human Resources Routes */}
+          <Route path="/hr" element={<HumanResources />} />
+          <Route path="/hr/employees" element={<EmployeeManagement />} />
+          <Route path="/hr/payroll" element={<PayrollManagement />} />
+          <Route path="/hr/time-attendance" element={<TimeAttendance />} />
+          <Route path="/hr/training" element={<TrainingDevelopment />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
