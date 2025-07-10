@@ -56,6 +56,15 @@ import EquipmentRegistration from "./pages/equipment/EquipmentRegistration";
 import ConditionAssessment from "./pages/equipment/ConditionAssessment";
 import EquipmentSpecifications from "./pages/equipment/EquipmentSpecifications";
 
+// Equipment Dashboard imports
+import EquipmentStatus from "./pages/equipment/dashboard/EquipmentStatus";
+import MaintenanceDashboard from "./pages/equipment/dashboard/MaintenanceDashboard";
+import FinancialPerformance from "./pages/equipment/dashboard/FinancialPerformance";
+import UtilizationAnalytics from "./pages/equipment/dashboard/UtilizationAnalytics";
+
+// Equipment Management imports
+import MaintenanceSchedule from "./pages/equipment/MaintenanceSchedule";
+
 // Inventory imports
 import Inventory from "./pages/Inventory";
 import SeedInventory from "./pages/inventory/SeedInventory";
@@ -147,6 +156,15 @@ const App = () => (
           <Route path="/equipment/registration" element={<EquipmentRegistration />} />
           <Route path="/equipment/condition" element={<ConditionAssessment />} />
           <Route path="/equipment/specifications" element={<EquipmentSpecifications />} />
+          
+          {/* Equipment Dashboard Routes */}
+          <Route path="/equipment/dashboard/status" element={<EquipmentStatus />} />
+          <Route path="/equipment/dashboard/maintenance" element={<MaintenanceDashboard />} />
+          <Route path="/equipment/dashboard/financial" element={<FinancialPerformance />} />
+          <Route path="/equipment/dashboard/utilization" element={<UtilizationAnalytics />} />
+          
+          {/* Equipment Management Routes */}
+          <Route path="/equipment/maintenance/schedule" element={<MaintenanceSchedule />} />
           
           {/* Inventory Routes */}
           <Route path="/inventory" element={<Inventory />} />
